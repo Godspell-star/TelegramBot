@@ -8,16 +8,16 @@ from aiogram.fsm.context import FSMContext
 from aiogram.client.default import DefaultBotProperties
 from aiogram.enums import ParseMode
 
-from second.config import ADMIN_ID, GROUP_CHAT_ID
+from config import ADMIN_ID, GROUP_CHAT_ID
 
 from dotenv import load_dotenv
 load_dotenv()
 import os
 
 # Импортируем ваши роутеры для записи
-from second.admin import admin_router
-from second.client_enroll import client_menu_keyboard, client_router
-from second.database import init_enroll_db
+from admin import admin_router
+from client_enroll import client_menu_keyboard, client_router
+from database import init_enroll_db
 
 dp = Dispatcher()
 # Этот роутер подключается первым, чтобы /start срабатывал даже посреди записи
